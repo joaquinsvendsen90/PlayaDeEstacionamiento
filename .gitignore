@@ -1,3 +1,11 @@
+/bin
+/src
+invariantesT.py
+matricest0.html
+README.md
+.classpath
+.project
+
 # Compiled class file
 *.class
 

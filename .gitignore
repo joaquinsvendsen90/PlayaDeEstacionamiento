@@ -1,11 +1,10 @@
 /bin
-/src
 matricest0.html
-invariantesT.py
+invarantesT.py
 README.md
 /.settings
 .classpath
-.protect
+.project
 
 # Compiled class file
 *.class

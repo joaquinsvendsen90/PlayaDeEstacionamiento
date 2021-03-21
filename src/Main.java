@@ -85,12 +85,12 @@ public class Main {
 		//redDePetri.marcado.set(19,0);		//con este marcado anulo el 2do piso para realizar tests de tiempo.
 		redDePetri.mostrarMarcado();
 		//ejecucion de hilos	
-		GestorDeMonitor.tiempoInicio = System.currentTimeMillis();
+		Hilos.tiempoInicio = System.currentTimeMillis();
 		for (int i=0; i<cantHilos; i++){
 			threads[i].start();
 		}
-		while(true) {
+		/*while(true) {
 			
-		}
+		}*/
 	}
 }

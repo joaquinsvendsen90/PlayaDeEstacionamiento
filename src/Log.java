@@ -55,7 +55,7 @@ public class Log {
 						//ErrorManager.showErrorMessage("createOds", e.toString());
 					}
 			}
-			GestorDeMonitor.condicionHilo = false; //una vez finalizada la planilla, finalizan la ejecucion de los hilos.
+			Hilos.condicionHilo = false; //una vez finalizada la planilla, finalizan la ejecucion de los hilos.
 		}
 	}
 }

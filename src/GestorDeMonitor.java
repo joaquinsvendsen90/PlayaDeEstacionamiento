@@ -13,8 +13,8 @@ public class GestorDeMonitor{
 	List<Integer> decision;
 	long tiempo;
 	
-	public static boolean condicionHilo = true;
-	public static long tiempoInicio, tiempoFinal;
+	//public static boolean condicionHilo = true;
+	//public static long tiempoInicio, tiempoFinal;
 
 	//constructor
 	public GestorDeMonitor(RedDePetri redDePetri,int[][] transicionesPorHilo,Politicas politicas,SensibilizadoConTiempo sensibilizadoContiempo,Mutex mutex,Colas colas,Log log) {
@@ -37,11 +37,11 @@ public class GestorDeMonitor{
 		System.out.println("Adentro del monitor "+Hilos.nombre[Integer.parseInt(Thread.currentThread().getName())]);
 		boolean adentro = true;
 		while (adentro == true) { //quiere decir que está dentro del monitor.
-			if (condicionHilo == false) {
+			/*if (condicionHilo == false) {
 				tiempoFinal  = System.currentTimeMillis();
 				System.out.println("Ejecución finalizada. Se tardó "+((tiempoFinal - tiempoInicio)) +" ms para que salgan " +Ventana.cantidadAutos +" autos del estacionamiento." );
 				//System.exit(1);
-			}
+			}*/
 			k = redDePetri.disparar(transicionADisparar);
 			redDePetri.mostrarMarcado();
 			if (k == true) {											//pudo disparar la transicion!

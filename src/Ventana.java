@@ -10,8 +10,7 @@ public class Ventana extends JFrame implements ActionListener {
 	public static boolean activarTiempo = false;	// variable que se pone en true cuando se produce selecciona Activar el tiempo en la ventana grafica
 	private int tildeLog = 0; 						// variable para el checkbox de generar log. tilde = 0 -> generarLog = false, tilde = 1 -> generarLog = true 
 	private int tildeTiempo = 0;					// variable para el checkbox de activar tiempos. 	
-	private static String salidasTotal, entrada1, entrada2, entrada3, entradaTotal, piso1, piso2, salida1, salida2;							// variables que muestran los autos que entran y salen, convertidas a String
-	
+	private static String salidasTotal, entrada1, entrada2, entrada3, entradaTotal, piso1, piso2, salida1, salida2, marcaPiso1, marcaPiso2;							// variables que muestran los autos que entran y salen, convertidas a String
 	
 	private Politicas politicas;
 	private JLabel Etiqueta;			//Etiquetas de comentarios que estan dentro de la ventana
@@ -36,6 +35,11 @@ public class Ventana extends JFrame implements ActionListener {
 	private static JLabel Etiqueta20;
 	private JLabel Etiqueta21;				//Autos saliendo por barrera 2
 	private static JLabel Etiqueta22;
+	private JLabel Etiqueta23; 				//Etiqueta: Marcado piso 1
+	private static JLabel Etiqueta24;
+	private JLabel Etiqueta25; 				//Etiqueta: Marcado piso 2
+	private static JLabel Etiqueta26;
+	
 	
 	
 	
@@ -142,6 +146,10 @@ public class Ventana extends JFrame implements ActionListener {
 		Etiqueta20 = new JLabel();
 		Etiqueta21 = new JLabel();
 		Etiqueta22 = new JLabel();
+		Etiqueta23 = new JLabel();
+		Etiqueta24 = new JLabel();
+		Etiqueta25 = new JLabel();
+		Etiqueta26 = new JLabel();
 		
 		Etiqueta5.setText("Cantidad de autos que salieron: ");
 		Etiqueta5.setBounds(20,235,600,15); // x,y, ancho, alto 
@@ -170,6 +178,14 @@ public class Ventana extends JFrame implements ActionListener {
 		Etiqueta21.setText("Autos que salieron por barrera 2: ");
 		Etiqueta21.setBounds(20,175,600,15); // x,y, ancho, alto
 		Etiqueta22.setBounds(375,175,200,15); // x,y, ancho, alto
+		Etiqueta23.setText("Piso 1: ");
+		Etiqueta23.setBounds(20,260,600,15); // x,y, ancho, alto
+		Etiqueta24.setBounds(375,260,200,15); // x,y, ancho, alto
+		Etiqueta25.setText("Piso 2: ");
+		Etiqueta25.setBounds(20,275,600,15); // x,y, ancho, alto
+		Etiqueta26.setBounds(375,275,200,15); // x,y, ancho, alto
+		
+		
 		
 		add(Etiqueta5);
 		add(Etiqueta6);
@@ -189,6 +205,10 @@ public class Ventana extends JFrame implements ActionListener {
 		add(Etiqueta20);
 		add(Etiqueta21);
 		add(Etiqueta22);
+		add(Etiqueta23);
+		add(Etiqueta24);
+		add(Etiqueta25);
+		add(Etiqueta26);
 		
 		//inicializo la Subventana
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //al cerrar la ventana se detiene el programa
@@ -218,7 +238,11 @@ public class Ventana extends JFrame implements ActionListener {
 		salida1 = Integer.toString(RedDePetri.salidaBarrera1);
 		Etiqueta20.setText(salida1);
 		salida2 = Integer.toString(RedDePetri.salidaBarrera2);
-		Etiqueta22.setText(salida2);	
+		Etiqueta22.setText(salida2);
+		marcaPiso1 = Integer.toString(RedDePetri.marcadoPiso1);
+		Etiqueta24.setText(marcaPiso1);
+		marcaPiso2 = Integer.toString(RedDePetri.marcadoPiso2);
+		Etiqueta26.setText(marcaPiso2);
 	}
 	
 	@Override

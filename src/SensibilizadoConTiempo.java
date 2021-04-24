@@ -6,13 +6,13 @@ public class SensibilizadoConTiempo {
 	long[] alfa;	//tiempo alfa de cada transición. (en milisegundos)
 	boolean primero[] = {false,false,false ,false ,false ,false ,false ,false ,false ,false ,false,false ,false ,false ,false ,false,false,false,false,false,false}; 
 	boolean esperando[] = {false,false,false ,false ,false ,false ,false ,false ,false ,false ,false,false ,false ,false ,false ,false,false,false,false,false,false};
-	boolean vieneDelSleep[] = {false,false,false ,false ,false ,false ,false ,false,false}; //uno por hilo.
-	int 	IDHiloSleep[] = {10,10,10 ,10 ,10 ,10 ,10 ,10 ,10 ,10 ,10,10 ,10 ,10 ,10 ,10,10,10,10,10,10};  // como usamos el hilo 0, el 10 indica como vacío.
+	boolean vieneDelSleep[] = {false,false,false ,false ,false ,false ,false ,false,false, false, false}; //uno por hilo.
+	int 	IDHiloSleep[] = {11,11,11 ,11 ,11 ,11 ,11 ,11 ,11 ,11 ,11,11 ,11 ,11 ,11 ,11,11,11,11,11,11};  // como usamos el hilo 0, el 10 indica como vacío.
 				
 	public SensibilizadoConTiempo(boolean tiempoActivado) {
 		if (tiempoActivado == true) {
 			     //transición: 1,10,11,12,13,14,15,16,19,2,20,21,23,24,3,4,5,6,7,8,9
-			alfa = new long[] {0,100,0 ,2 ,0 ,2 ,3 ,3 ,0 ,0,0 ,0 ,0 ,0,0,100,100,100,0,0,100}; 
+			alfa = new long[] {0,100,0 ,0 ,0 ,0 ,2 ,2 ,0 ,0,0 ,0 ,0 ,0,0,100,100,100,0,0,100}; 
 		}
 		else {
 			alfa = new long[] {0,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0,0,0,0,0,0,0}; //sirve para quitar los tiempos a la hora de hacer los tests.
@@ -53,7 +53,7 @@ public class SensibilizadoConTiempo {
 	}
 	
 	void resetEsperando(int transicion) {
-		IDHiloSleep[transicion] = 10; // el 10 indica que no hay hilos durmiendo esperando por disparar la transicion.
+		IDHiloSleep[transicion] = 11; // el 11 indica que no hay hilos durmiendo esperando por disparar la transicion.
 		esperando[transicion] = false;
 	}
 	

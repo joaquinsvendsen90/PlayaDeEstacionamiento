@@ -16,6 +16,7 @@ public class RedDePetri {
 	public List<Integer> T_sensibilizadas = new ArrayList<Integer>();
 	public static int transiciones[] = {1,10,11,12,13,14,15,16,19,2,20,21,23,24,3,4,5,6,7,8,9};
 	
+	public static int marcadoPiso1 = 0, marcadoPiso2 = 0;
 	int transicionADisparar;
 	public static int entradaBarrera1 = 0, entradaBarrera2 = 0, entradaBarrera3 = 0, entradasTotal = 0;
 	public static int estacionadosPiso1 = 0, estacionadosPiso2 = 0, salidaBarrera1 = 0, salidaBarrera2 = 0, salidasTotal = 0;
@@ -70,7 +71,9 @@ public class RedDePetri {
 			if (ventana == true) {
 				if (sensibilizadoConTiempo.esperando[obtenerPosicionT(transicionADisparar)] == false) {					
 					actualizaMarcado(transicionADisparar);		//llamo a la funcion que genera el nuevo marcado (disparo la transicion)
-					ContadorDeAutos(transicionADisparar);	// Me fijo si salio algun auto de la playa de estacionamiento y mantengo un conteo de los mismos. 
+					ContadorDeAutos(transicionADisparar);	// Me fijo si salio algun auto de la playa de estacionamiento y mantengo un conteo de los mismos.
+					marcadoPiso1 = marcado.get(3);			//guardo los marcados de las plazas que representan los pisos 1 y 2. para luego mostraarlos en la ventana grafica. 
+					marcadoPiso2 = marcado.get(4);
 					Ventana.mostrarVentanaAutos();	
 					return true;					//quiere decir que pudo disparar la transicion.
 				}
@@ -79,7 +82,9 @@ public class RedDePetri {
 						System.out.println("El hilo "+Integer.parseInt(Thread.currentThread().getName())+" viene de un sleep y ahora quiere disparar la transición "+transicionADisparar);
 						sensibilizadoConTiempo.resetEsperando(obtenerPosicionT(transicionADisparar));		//ponemos esperando = false.
 						actualizaMarcado(transicionADisparar);		//llamo a la funcion que genera el nuevo marcado (disparo la transicion)
-						ContadorDeAutos(transicionADisparar);	
+						ContadorDeAutos(transicionADisparar);
+						marcadoPiso1 = marcado.get(3);
+						marcadoPiso2 = marcado.get(4);
 						Ventana.mostrarVentanaAutos();	//Muestra en la ventana la cantidad de autos que van saliendo
 						return true;					//quiere decir que pudo disparar la transicion.
 					}

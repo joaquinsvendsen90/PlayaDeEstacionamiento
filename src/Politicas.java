@@ -7,14 +7,17 @@ public class Politicas {
 	//public static int prioridadesT_b[] = {1,1, 2, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1,1,1,1,1,1,1};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
 	
 	public static int prioridadesT_a[] = {2,2, 2, 2, 2, 2, 2, 2, 2, 2,2, 2, 2, 2, 2,2,2,2,1,2,2};		//Prioridad llenar de vehículos planta baja y luego habilitar el piso superior. Prioridad salida indistinta.
-	public static int prioridadesT_b[] = {2,2, 2, 1, 2, 2, 2, 2, 2, 2,2, 2, 2, 2, 2,2,2,2,2,2,2};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
+	//public static int prioridadesT_b[] = {2,2, 2, 1, 2, 2, 2, 2, 2, 2,2, 2, 2, 2, 2,2,2,2,2,2,2};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
+	
+	public static int prioridadesT_b[] = {1,1, 3, 2, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1,1,1,1,1,1,1};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
+	
 	public static int prioridadesT[] = prioridadesT_a;
 	
 	public Politicas() {}
 	
 	public static List<Integer> cual(List<Integer> hilosBloqueadosListos)  {		//este método es el encargado en decidir qué hilo será desbloqueado de la cola.
 		List<Integer> decision = new ArrayList<Integer>();
-		int comparador = 3, posicion = 0, cantHilosBloqueadosListos = 1;
+		int comparador = 4, posicion = 0, cantHilosBloqueadosListos = 1;
 		for (int i=0;i<hilosBloqueadosListos.size();i++) {
 			if(hilosBloqueadosListos.get(i) == 1) {
 				decision.add(i,0);

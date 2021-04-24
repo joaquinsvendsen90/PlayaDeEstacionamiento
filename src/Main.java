@@ -13,16 +13,16 @@ public class Main {
 		int TransicionesHilo4[]  = {9}; 		// salida del piso 1
 		int TransicionesHilo5[]  = {23,8}; 		// Subir al piso 2
 		int TransicionesHilo6[]  = {10,24}; 	// Bajar del piso 2
-		//int TransicionesHilo7[]  = {11,13,15};  // Salida por barrera 1
-		//int TransicionesHilo8[]  = {12,14,16}; 	// Salida por barrera 2
+		int TransicionesHilo7[]  = {11,13,15};  // Salida por barrera 1
+		int TransicionesHilo8[]  = {12,14,16}; 	// Salida por barrera 2
 		
-		int TransicionesHilo7[]  = {11};  		// Llegada a la barrera de salida 1
-		int TransicionesHilo8[]  = {13,15}; 	// Salida por barrera 1
-		int TransicionesHilo9[]  = {12};		// LLegada a la barrera de salida 2
-		int TransicionesHilo10[] = {14,16};		// Salida por barrera 2
+		//int TransicionesHilo7[]  = {11};  		// Llegada a la barrera de salida 1
+		//int TransicionesHilo8[]  = {13,15}; 	// Salida por barrera 1
+		//int TransicionesHilo9[]  = {12};		// LLegada a la barrera de salida 2
+		//int TransicionesHilo10[] = {14,16};		// Salida por barrera 2
 		
 				
-		int[][] transicionesPorHilo = {TransicionesHilo0,TransicionesHilo1,TransicionesHilo2,TransicionesHilo3,TransicionesHilo4,TransicionesHilo5,TransicionesHilo6,TransicionesHilo7,TransicionesHilo8,TransicionesHilo9,TransicionesHilo10};
+		int[][] transicionesPorHilo = {TransicionesHilo0,TransicionesHilo1,TransicionesHilo2,TransicionesHilo3,TransicionesHilo4,TransicionesHilo5,TransicionesHilo6,TransicionesHilo7,TransicionesHilo8};
 		final int cantHilos = transicionesPorHilo.length;
 		int cantidadAutosInicial;
 		
@@ -74,8 +74,8 @@ public class Main {
 		Hilos hilo6 = new Hilos(monitor,TransicionesHilo6,sensibilizadoConTiempo);
 		Hilos hilo7 = new Hilos(monitor,TransicionesHilo7,sensibilizadoConTiempo);
 		Hilos hilo8 = new Hilos(monitor,TransicionesHilo8,sensibilizadoConTiempo);
-		Hilos hilo9 = new Hilos(monitor,TransicionesHilo9,sensibilizadoConTiempo);
-		Hilos hilo10 = new Hilos(monitor,TransicionesHilo10,sensibilizadoConTiempo);
+		//Hilos hilo9 = new Hilos(monitor,TransicionesHilo9,sensibilizadoConTiempo);
+		//Hilos hilo10 = new Hilos(monitor,TransicionesHilo10,sensibilizadoConTiempo);
 		
 		//Creación de Hilos:
 		
@@ -88,8 +88,8 @@ public class Main {
 		threads[6]=new Thread(hilo6,"6");
 		threads[7]=new Thread(hilo7,"7");
 		threads[8]=new Thread(hilo8,"8");
-		threads[9]=new Thread(hilo9,"9");
-		threads[10]=new Thread(hilo10,"10");
+		//threads[9]=new Thread(hilo9,"9");
+		//threads[10]=new Thread(hilo10,"10");
 		
 		redDePetri.marcado.set(16, cantidadAutosInicial); //seteamos la plaza 26 (vehiculos por acceder) de la red con la cantidad de autos seleccionada.
 		//redDePetri.marcado.set(19,0);		//con este marcado anulo el 2do piso para realizar tests de tiempo.

@@ -3,12 +3,7 @@ import java.util.List;
 
 public class Politicas {						  	
 	 					  //Transiciones: 1,10,11,12,13,14,15,16,19,2,20,21,23,24,3,4,5,6,7,8,9}
-	//public static int prioridadesT_a[] = {1,1, 1, 1, 1, 1, 1, 1, 1, 1,1, 1, 2, 1, 1,1,1,1,1,1,1};		//Prioridad llenar de vehículos planta baja y luego habilitar el piso superior. Prioridad salida indistinta.																														
-	//public static int prioridadesT_b[] = {1,1, 2, 1, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1,1,1,1,1,1,1};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
-	
-	public static int prioridadesT_a[] = {2,2, 2, 2, 2, 2, 2, 2, 2, 2,2, 2, 2, 2, 2,2,2,2,1,2,2};		//Prioridad llenar de vehículos planta baja y luego habilitar el piso superior. Prioridad salida indistinta.
-	//public static int prioridadesT_b[] = {2,2, 2, 1, 2, 2, 2, 2, 2, 2,2, 2, 2, 2, 2,2,2,2,2,2,2};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
-	
+	public static int prioridadesT_a[] = {2,2, 2, 2, 2, 2, 2, 2, 2, 2,2, 2, 2, 2, 2,2,2,2,1,2,2};		//Prioridad llenar de vehículos planta baja y luego habilitar el piso superior. Prioridad salida indistinta.	
 	public static int prioridadesT_b[] = {1,1, 3, 2, 1, 1, 1, 1, 1, 1,1, 1, 1, 1, 1,1,1,1,1,1,1};		//Prioridad llenado indistinta. Prioridad salida a calle 2.
 	
 	public static int prioridadesT[] = prioridadesT_a;

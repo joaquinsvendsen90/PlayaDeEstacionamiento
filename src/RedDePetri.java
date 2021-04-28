@@ -20,7 +20,6 @@ public class RedDePetri {
 	int transicionADisparar;
 	public static int entradaBarrera1 = 0, entradaBarrera2 = 0, entradaBarrera3 = 0, entradasTotal = 0;
 	public static int estacionadosPiso1 = 0, estacionadosPiso2 = 0, salidaBarrera1 = 0, salidaBarrera2 = 0, salidasTotal = 0;
-	//public static int autosEntrada = 0, autosSalida = 0; //contadores que frenan la ejecución.
 	
 	public RedDePetri(Politicas politicas,SensibilizadoConTiempo sensibilizadoConTiempo,Mutex mutex,Log log) {
 		this.politicas = politicas;
@@ -141,8 +140,6 @@ public class RedDePetri {
 	}
 	
 	public void  ContadorDeAutos(int t) {		//metodo para analizar y llevar una cuenta de la cantidad de autos que salen y se tiene que corresponder con la cantidad de autos seleccionados por el usuario que ingresaron a la playa
-		//estacionadosPiso1 = marcado.get(3);
-		//estacionadosPiso2 = marcado.get(4);
 		switch(t) {
 			case 19: {
 				entradaBarrera1++;

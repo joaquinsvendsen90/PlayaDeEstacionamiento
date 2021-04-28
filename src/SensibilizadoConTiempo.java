@@ -11,9 +11,8 @@ public class SensibilizadoConTiempo {
 				
 	public SensibilizadoConTiempo(boolean tiempoActivado) {
 		if (tiempoActivado == true) {
-			     //transición: 1,10,11,12,13,14,15,16,19,2,20,21,23,24,3,4,5,6,7,8,9
-			//alfa = new long[] {0,100,0, 0, 0 ,0 ,1 ,1,100,0,100,100,0,0,0,1,1,1,0,0,100};
-			alfa = new long[] {0,100,0, 0, 0 ,0 ,3 ,3,120,0,120,120,0,0,0,1,1,1,0,0,100};
+			     //transición: 1,10, 11,12,13,14,15,16,19,2,20, 21, 23,24,3,4,5,6,7,8,9
+			alfa = new long[] {0,100,0, 0, 0 ,0 ,3 ,3,120,0,120,120,0, 0, 0,1,1,1,0,0,100};
 		}
 		else {
 			alfa = new long[] {0,0,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,0 ,0 ,0 ,0 ,0,0,0,0,0,0,0}; //sirve para quitar los tiempos a la hora de hacer los tests.

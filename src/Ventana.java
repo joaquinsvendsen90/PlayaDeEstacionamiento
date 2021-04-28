@@ -40,10 +40,6 @@ public class Ventana extends JFrame implements ActionListener {
 	private JLabel Etiqueta25; 				//Etiqueta: Marcado piso 2
 	private static JLabel Etiqueta26;
 	
-	
-	
-	
-	
 	private JRadioButton opcion1; 		//boton para la primera opcion
 	private JRadioButton opcion2;		//boton para la segunda opcion
 	private JButton	botonComenzar;		//boton de para comenzar la ejecucion
@@ -124,8 +120,7 @@ public class Ventana extends JFrame implements ActionListener {
 		setTitle("*--Playa de estacionamiento--*"); //Titulo de la ventana
 		setVisible(true); //hace visible la ventana
 	}	
-		
-	
+			
 	public Ventana() {	//VENTANA SECUNDARIA - Muestra la cantidad de autos que van saliendo.
 		//Configuracion de las etiquetas
 		Etiqueta5 = new JLabel();
@@ -184,8 +179,6 @@ public class Ventana extends JFrame implements ActionListener {
 		Etiqueta25.setText("Piso 2: ");
 		Etiqueta25.setBounds(20,275,600,15); // x,y, ancho, alto
 		Etiqueta26.setBounds(375,275,200,15); // x,y, ancho, alto
-		
-		
 		
 		add(Etiqueta5);
 		add(Etiqueta6);
